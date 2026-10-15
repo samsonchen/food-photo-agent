@@ -151,6 +151,8 @@ activemq-data/
 
 # Environments
 .env
+.env.*
+!.env.example
 .envrc
 .venv
 env/
@@ -218,3 +220,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# food-photo-agent: DATA_DIR 的內容（照片、Excel 紀錄、log）不可以 commit
+# DATA_DIR 建議放在專案之外；萬一放在專案裡，下面這些名稱也會被擋下
+food-data/
+data/
+photos/
+*.xlsx
+*.xls
